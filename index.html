@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>To Do List</title>
+</head>
+<body class="m-0 p-0 min-h-screen flex flex-col">
+    <header class="p-4 border-b flex justify-start">
+        <nav>
+            <a href="/" class="text-base font-medium underline">To Do List</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow bg-gray-50">
+        <div class="min-w-max min-h-full flex flex-col items-center">
+            <form class="py-8 flex flex-col items-center gap-4">
+                <div class="flex gap-4">
+                    <input id="inputTasks" class="w-100 border border-grey-200 rounded-md px-4 py-2" type="text" placeholder="Add a task"/> 
+                    <a onclick="AddTasks()" class="group flex items-center px-8 cursor-pointer border border-grey-200 rounded-md">
+                        <p class="transtition-transform duration-300 group-hover:scale-110">Add</p>
+                    </a>
+                    <a onclick="Reboot()" class="bg-red-500 rounded-md w-16 text-center p-2 cursor-pointer">Reboot</a>
+                </div>
+                <div id="nullValue"></div>
+                <select name="filter" id="filter" class="min-w-max border border-grey-200 rounded-md">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+            </form>
+            <div id="areaTasks"></div>
+        </div>
+    </main>
+
+    <footer class="flex justify-around p-4 border-t">
+        <p class="text-base">Projet réalisé par <a href="https://tom-fourneaux.fr" class="text-base underline">Tom Fourneaux</a></p>
+        <p class="text-base">Copyright © 2025</p>
+    </footer>
+</body>
+</html>
