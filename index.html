@@ -15,14 +15,16 @@
     </header>
 
     <main class="flex-grow bg-gray-50">
-        <div class="min-w-max min-h-full flex flex-col items-center">
+        <div class="min-h-full flex flex-col items-center">
             <form class="py-8 flex flex-col items-center gap-4">
-                <div class="flex gap-4">
-                    <input id="inputTasks" class="w-100 border border-grey-200 rounded-md px-4 py-2" type="text" placeholder="Add a task"/> 
-                    <a onclick="AddTasks()" class="group flex items-center px-8 cursor-pointer border border-grey-200 rounded-md">
-                        <p class="transtition-transform duration-300 group-hover:scale-110">Add</p>
-                    </a>
-                    <a onclick="Reboot()" class="bg-red-500 rounded-md w-16 text-center p-2 cursor-pointer">Reboot</a>
+                <div class="flex flex-col gap-4 md:flex-row">
+                    <input id="inputTasks" class="md:w-100 border border-grey-200 rounded-md px-4 py-2" type="text" placeholder="Add a task"/>
+                    <div class="flex gap-4 justify-between">
+                        <a onclick="AddTasks()" class="group flex items-center px-8 cursor-pointer border border-grey-200 rounded-md">
+                            <p class="transtition-transform duration-300 group-hover:scale-110">Add</p>
+                        </a>
+                        <a onclick="Reboot()" class="bg-red-500 rounded-md w-16 text-center p-2 cursor-pointer">Reboot</a>
+                    </div>
                 </div>
                 <div id="nullValue"></div>
                 <select name="filter" id="filter" class="min-w-max border border-grey-200 rounded-md">
@@ -30,13 +32,14 @@
                     <option value="completed">Completed</option>
                     <option value="incomplete">Incomplete</option>
                 </select>
+                <p id="taskCount">Number of tasks: 0</p>
             </form>
-            <div id="areaTasks"></div>
+            <div id="areaTasks" class="px-8"></div>
         </div>
     </main>
 
     <footer class="flex justify-around p-4 border-t">
-        <p class="text-base">Projet réalisé par <a href="https://tom-fourneaux.fr" class="text-base underline">Tom Fourneaux</a></p>
+        <p class="text-base">Project create by <a href="https://tom-fourneaux.fr" class="text-base underline">Tom Fourneaux</a></p>
         <p class="text-base">Copyright © 2025</p>
     </footer>
 </body>
